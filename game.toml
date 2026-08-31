@@ -1,0 +1,53 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Kula World"
+id = "SCES-01000"
+players = 1
+exe = "disc/SCES_010.00"
+disc = ""
+load_address = "0x00011000"
+entry_pc = "0x00069F60"
+text_size = "0x00093000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "disc1.bin"
+cue_name = "disc1.cue"
+boot_exe = "SCES_010.00"
+known_sizes = [255123792]
+known_md5 = [
+  "0f675dc230354f8c3b835bf34841bd20",
+]
+known_sha1 = [
+  "0bf9fb06b73a9b5353cdcc371e188934369068da",
+]
+known_crc32 = [
+  "a9ac54a4",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "kula-world- Recompiled"
+memcard_dir = "saves"
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "8cc747a424dd4cb8fb0959db3dcb51ea51c1807d5c30cf5199201972ff5a678b"

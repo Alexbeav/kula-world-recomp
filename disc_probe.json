@@ -1,0 +1,31 @@
+{
+  "cue_path": "disc1.cue",
+  "cue_name": "disc1.cue",
+  "bin_name": "disc1.bin",
+  "track_count": 1,
+  "data_track_size": 255123792,
+  "data_track_md5": "0f675dc230354f8c3b835bf34841bd20",
+  "data_track_sha1": "0bf9fb06b73a9b5353cdcc371e188934369068da",
+  "data_track_crc32": "a9ac54a4",
+  "boot_exe": "SCES_010.00",
+  "serial": "SCES-01000",
+  "serial_exe": "SCES_010.00",
+  "volume_id": "",
+  "display_name": "kula-world-",
+  "load_address": "0x00011000",
+  "entry_pc": "0x00069F60",
+  "text_size": "0x00093000",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "8cc747a424dd4cb8fb0959db3dcb51ea51c1807d5c30cf5199201972ff5a678b",
+  "boot_exe_sha256": "28c8f46d28f971038ccd68135de4d5dfc0f7a1c00285748aea98276a5d37bf75",
+  "seed_count": 727,
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
