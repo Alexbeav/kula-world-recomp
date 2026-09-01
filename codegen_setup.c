@@ -16,7 +16,7 @@ static const PsxrecompCodegenHostConfig kCodegenConfig = {
     .gen_marker_relpath = "generated/SCES_010.00_dispatch.c",
     .build_dir_name = "build-release",
     .cmake_target = "psx-runtime",
-    .exe_basename = "kula_world__Recompiled",
+    .exe_basename = "Kula_World_Recompiled",
     .prepare_note =
         "Uses your legal disc with the local psxrecomp SDK to generate "
         "BIOS + game C, then cmake --build. The product lives under "
