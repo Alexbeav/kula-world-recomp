@@ -30,11 +30,13 @@ known_crc32 = [
 ]
 
 [recompiler]
+discovery = "reachable"
 seeds = "seeds/ghidra_funcs.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
+overlay_region_floor = "0x11000"
 window_title = "kula-world- Recompiled"
 memcard_dir = "saves"
 
